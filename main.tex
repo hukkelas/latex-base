@@ -1,0 +1,143 @@
+
+\documentclass[12pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+
+\usepackage{geometry}   % See geometry.pdf to learn the layout options. There are lots.
+%\geometry{landscape}                		% Activate for rotated page geometry
+
+\geometry{
+a4paper, % or letterpaper, or a5paper or ... 
+total={150mm,260mm},
+left=10mm,
+top=20mm,
+}
+ 
+ %---------- definition of header and footer line ------------------
+ 
+ % Layout with header and footer line
+ \usepackage{fancyhdr}
+
+\newcommand{\docid}{ }
+\newcommand{\docversion}{texed \today}
+
+\lhead{\scriptsize\bfseries\rightmark \ Probabilistic Impainting}
+\chead{ }
+\rhead{\bfseries\thepage}
+\lfoot{\scriptsize\bfseries {H\aa kon Hukkel\aa s, NTNU}}
+\cfoot{}
+\rfoot{\scriptsize\bfseries\docid \qquad \docversion}
+
+\renewcommand{\headrulewidth}{0.2mm}
+\renewcommand{\footrulewidth}{0.2mm}
+%----------------------------------------------------------------------------------
+ 
+%--------------------------- fonts and symbols -----------------------------------------------------------
+\usepackage{amssymb}
+\usepackage{times}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+%------------------------- graphics --------------------------------------------------------------------------
+
+% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+% TeX will automatically convert eps --> pdf in pdflatex	
+\usepackage{graphicx}				
+\usepackage{epsfig}
+
+%------------------------------ tables, arrays, colors .... ------------------------------------------------------
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{colortbl}
+
+%------------- further layout options -------------------------------------------------
+\usepackage{xspace}
+\usepackage{setspace}
+%\doublespacing
+% or:
+\onehalfspacing
+
+% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage[parfill]{parskip}
+
+% for striking out words \sout. Without the option normalem, it converts \emph into underline
+\usepackage[normalem]{ulem}
+
+\usepackage{multirow}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+%math
+\usepackage{bm}
+\usepackage{changepage}
+\usepackage{url}   % use URLs in the text
+
+%--------------------------------------------- algorithms ---------------------------------------------
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\renewcommand{\algorithmicrequire}{\textbf{Initialization:}}
+\renewcommand{\algorithmicensure}{\textbf{Main loop:}}
+%\usepackage{algpseudocode}
+
+%misc
+\usepackage{lipsum}
+\usepackage{hyperref}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\input{VSIMacros.tex}
+
+
+%---------- Macros for Discussion Notes and Remarks ------------------------
+
+\usepackage{todonotes}
+
+\newcommand{\note}[1]{\todo[inline,color=orange!20]{#1}}
+\newcommand{\rmnote}[1]{\todo[inline,color=red!20]{RM: \quad {#1}}}
+\newcommand{\hhnote}[1]{\todo[inline,color=blue!20]{HH: \quad {#1}}}
+
+\newcommand{\replacetext}[2]{\sout{#1} \textcolor{red}{\textbf{#2}}}
+%\newcommand{\replacetext}[2]{\textcolor{red}{\textbf{#2}}}
+\newcommand{\deletetext}[1]{\textcolor{blue}{\sout{#1}}}
+\newcommand{\inserttext}[1]{\textcolor{red}{\textbf{#1}}}
+\newcommand{\missingtext}{\colorbox{orange}{$\bigtriangledown$}}
+\newcommand{\markuptext}[1]{\colorbox{yellow}{#1}}
+\newcommand{\infosource}[1]{\textcolor{blue}{[ source of this information: #1]}\qquad}
+
+\title{Some title}
+\author{Author}
+\date{\today}
+
+%------------------------------------- end of preamble ----------------------------------------------------------
+
+\begin{document}
+
+\pagestyle{fancy}   % activates the non-standard header and footer line
+
+
+\maketitle
+
+
+%---------------------- Bibliography ------------------------------------------------------------------
+\newpage 
+\vskip3em
+
+\begin{small}
+%\bibliographystyle{alpha}
+%\bibliographystyle{natbib}
+%\bibliographystyle{latex8}
+%\bibliographystyle{kluwer}
+\bibliographystyle{ELLIITprop}
+\end{small}
+
+\bibliography{bib_files/main}
+
+
+\end{document}
+\clearpage
+
+\end{document}
+
